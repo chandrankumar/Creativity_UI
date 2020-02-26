@@ -1,0 +1,28 @@
+<p>Create a new Profile!</p>
+
+<form  [formGroup]="createProfileForm" (ngSubmit)="onCreate()">    
+    <table> 
+        <tr class="form-group">
+            <td><label for="userName">User Name</label></td>
+            <td> <input type="text" class="form-control" formControlName="userName" placeholder="User Name"></td>
+        </tr>
+
+        <tr class="form-group">
+            <td><label for="email">Email *</label></td>
+            <td> <input type="text" class="form-control" formControlName="email" placeholder="Email Id"></td>
+        </tr>
+        <tr class="form-group">
+            <td><label for="password">Password</label></td>
+                <td><input type="password" class="form-control" formControlName="password" placeholder="Password"></td>
+        </tr>
+        <tr class="form-group">
+            <td><label for="fullName">Full Name</label>
+                <td><input type="text" class="form-control" formControlName="fullName" placeholder="Full Name"></td>
+        </tr>
+        <tr class="form-group">
+            <td><label for="language">Language</label>
+                <td><input type="text" class="form-control" formControlName="language" placeholder="Language Known"></td>
+        </tr>
+      <tr><td><button type="submit" class="btn btn-primary">Create</button></td></tr>
+</table>
+  </form>

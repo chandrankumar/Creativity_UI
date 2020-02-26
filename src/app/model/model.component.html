@@ -1,0 +1,59 @@
+<div id="modelPage">
+<p>Mobile Brand Page!</p>
+<div>
+<form  [formGroup]="addProduct" (ngSubmit)="onSubmit()">    
+    <table> 
+        <tr class="form-group">
+            <td><label for="brandName">Brand Name</label></td>
+            <td> <input type="text" class="form-control" formControlName="brandName" placeholder="Brand Name"></td>
+        </tr>
+        <tr class="form-group">
+            <td><label for="mobileModel">Model</label></td>
+                <td><input type="text" class="form-control" formControlName="mobileModel" placeholder="Mobile Model"></td>
+        </tr>
+        <tr class="form-group">
+            <td><label for="cost">Cost</label>
+                <td><input type="text" class="form-control" formControlName="cost" placeholder="Cost"></td>
+        </tr>
+        <tr class="form-group">
+            <td><label for="cost">Purchase Date</label>
+                <td>
+                    <mat-form-field>
+                        <mat-label>Choose a date</mat-label>
+                        <input matInput [matDatepicker]="picker" formControlName="purchaseDate">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                    </td>
+        </tr>
+      <tr><td><button type="submit" class="btn btn-primary">Add</button></td></tr>
+</table>
+  </form>
+
+</div>
+      <br><br><br>     
+
+      <div>
+        <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Brand Name</th>
+                <th scope="col">Model</th>
+                <th scope="col">Prize</th>
+                <th scope="col">Date of Purchase</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let model of brands; index as i">
+                <th scope="row">{{i+1}}</th>
+                <td>{{model.brandName}}</td>
+                <td>{{model.mobileModel}}</td>
+                <td>{{model.cost}}</td>
+                <td>{{model.purchaseDate | date }}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+    </div>
+    
