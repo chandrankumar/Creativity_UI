@@ -1,0 +1,69 @@
+To Install Angular Command prompt
+npm install @angular/cli
+
+To Create new project
+ng new Demo
+
+update dependencies in package.json
+npm init --yes
+
+To Install Bootstrap and jquery
+npm install bootstrap jquery --save
+npm install popper.js
+
+Then you have to update your angular.json file:
+
+"styles": [
+    "styles.css",
+    "./node_modules/bootstrap/dist/css/bootstrap.min.css"
+  ],
+  "scripts": [
+    "./node_modules/jquery/dist/jquery.min.js",
+    "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+  ]
+
+To Start Server
+npm serve -o --port 8080
+
+To Create component
+ng g component home
+
+
+To Create service
+ng g service home
+
+
+Date picker in angular
+ng add @angular/material
+npm install @angular/animations
+
+Cros orgin issue to fix
+Add the below code snippet in existing angular.json file
+
+"serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "Student-Ui:build",
+            "proxyConfig": "src/proxy.conf.json"
+          }
+
+create new proxy.conf.json file and past the below code
+
+{
+    "/shop/*": {
+        "target": "http://localhost:8080",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
+
+In package.json add the below line for the key "start" 
+
+"start": "ng serve --proxy-config proxy.conf.json",
+
+
+
+
+
+
+

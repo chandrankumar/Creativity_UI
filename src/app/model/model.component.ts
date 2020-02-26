@@ -21,7 +21,7 @@ export class ModelComponent implements OnInit {
 
     ngOnInit(): void {
       
-      this.addProduct = new FormGroup({
+        this.addProduct = new FormGroup({
         brandName: new FormControl(''),
         mobileModel: new FormControl(''),
         cost: new FormControl(''),

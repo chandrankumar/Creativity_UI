@@ -19,6 +19,7 @@ export class ModelService {
   }
 
    getProducts() {
+     console.log('get products...');
     return this.http.get<Model[]>('shop/products', httpOptions);
   }
 
