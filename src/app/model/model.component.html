@@ -1,7 +1,7 @@
 <div id="modelPage">
 <p>Mobile Brand Page!</p>
 <div>
-<form  [formGroup]="addProduct" (ngSubmit)="onSubmit()">    
+<form id="addProduct" [formGroup]="addProduct" (ngSubmit)="onSubmit()">    
     <table> 
         <tr class="form-group">
             <td><label for="brandName">Brand Name</label></td>
@@ -33,7 +33,7 @@
 </div>
       <br><br><br>     
 
-      <div>
+      <div *ngIf="brands.length">
         <table class="table">
             <thead class="thead-light">
               <tr>

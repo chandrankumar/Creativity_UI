@@ -20,7 +20,7 @@ export class ModelComponent implements OnInit {
   constructor(private modelService: ModelService){}
 
     ngOnInit(): void {
-      
+        
         this.addProduct = new FormGroup({
         brandName: new FormControl(''),
         mobileModel: new FormControl(''),

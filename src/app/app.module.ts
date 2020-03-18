@@ -4,7 +4,7 @@ import  {  FormsModule,  ReactiveFormsModule  }  from  '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ModelComponent } from './model/model.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    LoginComponent,
     ProfileComponent,
     ModelComponent
   ],

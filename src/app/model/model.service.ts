@@ -18,9 +18,9 @@ export class ModelService {
    return this.http.post<Model>('shop/addProduct', model ,httpOptions);
   }
 
-   getProducts() {
+   getProducts(searchTxt:string) {
      console.log('get products...');
-    return this.http.get<Model[]>('shop/products', httpOptions);
+    return this.http.get<Model[]>(`shop/product?searchTxt=${searchTxt}`, httpOptions);
   }
 
 }
